@@ -12,15 +12,25 @@ var guesses = 0
 var isSunk = false
 
 // Loop: while the ship is not sunk
+while (isSunk === false) {
+
     // get the users guess
+    guess = prompt("Ready, aim, fire! (Enter a number from 0-6):")
     // compare the users input to valid input values
     // if the users guess is invalid
+    if (guess < 0 || guess > 6) {
         // tell the user to enter a valid number
+        alert("Please enter a valid cell number")
+
     // else
-        // add one to the guesses
+    // add one to the guesses
+    } else {
+        guesses = guesses + 1
+    }
         // if the users guess matches the location
             // add one to the number of hits
             // if the number of hits is 3 
                 // set isSunk to true
                 // tell user "You sank my battleship"
+}
 // tell user stats
